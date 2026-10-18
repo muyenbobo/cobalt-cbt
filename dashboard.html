@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cobalt — Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <div id="app-header"></div>
+
+    <div id="resume-box" class="resume-box hidden"></div>
+
+    <div class="panel">
+      <h2>Choose your subjects</h2>
+      <p class="sub">Pick 1 to 4 subjects for this practice round.</p>
+
+      <p id="subjects-loading" class="empty-note">Loading subjects…</p>
+      <p id="subjects-empty" class="empty-note hidden">No subjects returned by the API.</p>
+      <div id="subject-grid" class="subject-grid"></div>
+
+      <div class="time-limit-row">
+        <label for="time-limit">Time limit</label>
+        <select id="time-limit">
+          <option value="auto">Auto — 1 minute per question</option>
+          <option value="900">15 minutes</option>
+          <option value="1800">30 minutes</option>
+          <option value="3600">1 hour</option>
+          <option value="5400">1 hour 30 minutes</option>
+          <option value="7200">2 hours (full JAMB length)</option>
+        </select>
+      </div>
+      <p class="stat-line">The timer starts when the quiz opens and submits automatically at zero.</p>
+
+      <p id="dash-error" class="error-text hidden"></p>
+
+      <div class="btn-row">
+        <button class="btn btn-gold" id="start-btn" type="button" disabled>Start quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

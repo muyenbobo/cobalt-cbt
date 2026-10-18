@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cobalt — Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <div id="app-header"></div>
+
+    <div class="panel" id="quiz-panel">
+      <div id="time-banner" class="banner hidden" role="status"></div>
+
+      <div class="quiz-head">
+        <span class="quiz-counter" id="quiz-counter"></span>
+        <span class="quiz-timer" id="quiz-timer" aria-label="Time remaining">--:--</span>
+      </div>
+      <div class="timer-bar"><div class="timer-bar-fill" id="timer-fill"></div></div>
+
+      <p class="question-text" id="question-text"></p>
+      <div id="options"></div>
+
+      <div class="question-jumper" id="jumper"></div>
+
+      <p id="quiz-error" class="error-text hidden"></p>
+
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="back-btn" type="button">Back</button>
+        <button class="btn btn-ghost" id="next-btn" type="button">Next</button>
+        <button class="btn btn-gold" id="submit-btn" type="button">Submit</button>
+      </div>
+
+      <p class="quiz-footer-links">
+        <button class="link-toggle" id="quit-btn" type="button">Quit this quiz</button>
+        <span class="stat-line" style="margin-left: 0.75rem;">Keys: A–D choose · ← → move</span>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
