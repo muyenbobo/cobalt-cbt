@@ -2,9 +2,10 @@
 // Every network call lives here. Pages call these functions instead of
 // writing raw fetch() calls.
 //
-// IMPORTANT: the API's CORS policy only allows requests from
-// http://localhost:3000 — serve this folder on port 3000
-// (e.g. `npx serve -l 3000`), using "localhost", not 127.0.0.1.
+// The API accepts requests from other origins too (the deployed GitHub Pages
+// site works), so any static server and port is fine for local development,
+// e.g. `npx http-server -p 3000 -c-1`. If you ever see a CORS error in the
+// browser console, the API's allowed origins need to include your site.
 //
 // Load order on every page: auth.js -> api.js -> ui.js -> page script.
 
